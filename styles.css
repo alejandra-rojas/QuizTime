@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+  font-family: "Fredoka One", cursive;
+  background-color: #037428;
+  background-image: url(img/ag-square.png);
+  color: beige;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 40px;
+  color: #55ec80;
+  font-size: 4rem;
+}
+
+#message-el {
+  color: #f2fc08;
+  padding: 30px 0;
+  font-size: 3rem;
+  opacity: 80%;
+}
+
+.container {
+  padding-bottom: 30px;
+  text-align: center;
+}
+p {
+  font-size: 2rem;
+  color: #0d001d;
+}
+
+.buttons {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+button {
+  font-family: "Fredoka One", cursive;
+  font-size: 1rem;
+  background-color: #f2fc08;
+  color: #016f32;
+  text-transform: uppercase;
+  width: 150px;
+  border-style: none;
+  padding: 15px 0;
+  border-radius: 10px;
+}
