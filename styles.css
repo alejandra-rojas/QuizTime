@@ -6,10 +6,9 @@
 
 body {
   padding-top: 50px;
-  font-family: "Fredoka One", cursive;
-  background-color: #037428;
-  background-image: url(img/ag-square.png);
-  color: beige;
+  font-family: "Rubik", sans-serif;
+  background-color: blanchedalmond;
+  color: black;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -17,42 +16,225 @@ body {
   align-items: center;
 }
 
-h1 {
-  margin-top: 40px;
-  color: #55ec80;
-  font-size: 4rem;
+p {
+  font-size: 2rem;
+  color: white;
 }
 
-#message-el {
+.title-container {
+  padding-bottom: 50px;
+}
+
+h1 {
+  margin-top: 40px;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+/* #message-el {
   color: #f2fc08;
   padding: 30px 0;
   font-size: 3rem;
   opacity: 80%;
+} */
+
+.score {
+  text-align: center;
+  padding: 25px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .container {
   padding-bottom: 30px;
   text-align: center;
+  position: relative;
 }
-p {
+
+h2 {
+  width: 780px;
+  font-weight: 600;
   font-size: 2rem;
-  color: #0d001d;
+}
+
+.questionInfo {
+  padding: 15px 0;
+  font-size: 0.9rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  text-transform: uppercase;
 }
 
 .buttons {
   display: flex;
   column-gap: 10px;
   align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
 }
 
-button {
-  font-family: "Fredoka One", cursive;
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+button,
+.button {
+  font-family: "Rubik", sans-serif;
   font-size: 1rem;
-  background-color: #f2fc08;
-  color: #016f32;
+  font-weight: 600;
+  background-color: grey;
   text-transform: uppercase;
-  width: 150px;
+  width: 180px;
   border-style: none;
-  padding: 15px 0;
+  padding: 15px;
   border-radius: 10px;
+}
+
+.emoji {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 270px;
+}
+
+.none {
+  display: none;
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: darkolivegreen;
+  color: whitesmoke;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.inner-container {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.modal-btn {
+  margin-top: 15px;
+  padding: 18px;
+  cursor: pointer;
+  width: 245px;
+  align-self: center;
+  background-color: blanchedalmond;
+  font-weight: 400;
+}
+
+#score-final {
+  padding: 10px 0;
+}
+
+form {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+#saveScoreForm button {
+  margin-top: 0;
+}
+
+.choices {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 20px auto;
+}
+
+.saveScoreMsg {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+input {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+/* input {
+  width: 28rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgb(30, 7, 75, 0.5);
+} */
+
+input::placeholder {
+  color: #aaa;
+}
+
+.highScores {
+  align-self: center;
+}
+
+#highScoresList {
+  color: black;
+  list-style: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 1.3rem;
+}
+
+#quizScreen {
+  display: none;
+}
+
+.btn-cont {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
 }
