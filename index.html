@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>the random quiz</title>
+  </head>
+  <body>
+    <div class="title-container" id="title">
+     <h1 class="title">The random quiz</h1>
+      <h3>Answer as many questions as you can in one minute.</h3>
+    </div>
+    <section id="startScreen">
+      <!-- <h2 id="message-el">ready to play?</h2> -->
+      <div class="buttons">
+        <button id="startQuiz">Start the quiz</button>
+        <button id="scoreboard">scoreboard</button>
+      </div>
+    </section>
+
+    <main id="quizScreen">
+      
+      <div class="container" id="display">
+        <div class="questionInfo">
+          <div>Category: <span id="category"></span></div>
+          <div>Difficulty: <span id="difficulty"></span></div>
+        </div>
+        <h2 id="question"></h2>
+        
+        <div class="form">
+          <div class="choices">
+            <div>
+              <input type="radio" name="choice" id="choice1" value="" />
+              <label for="choice1" id="choice1label"></label>
+            </div>
+            <div>
+              <input type="radio" name="choice" id="choice2" value="" />
+              <label for="choice2" id="choice2label"></label>
+            </div>
+            <div>
+              <input type="radio" name="choice" id="choice3" value="" />
+              <label for="choice3" id="choice3label"></label>
+            </div>
+            <div>
+              <input type="radio" name="choice" id="choice4" value="" />
+              <label for="choice4" id="choice4label"></label>
+            </div>
+          </div>
+          <div class="btn-cont">
+            
+            <button class="btn guess" id="guess">submit</button>
+            <button class="btn new" id="new">skip</button>
+          </div>
+        </div>
+        <h2 id="result"></h2>
+        <div class="score">
+          Your score: <span id="score-el"> 0</p>
+        </div>
+      </div>
+      <div class="countdown">
+        <h5>00:00</h5>
+      </div>
+    </main>
+
+    <section>
+
+      <div class="modal" id="modal">
+        <div class="modal-inner" id="modal-inner">
+          <div class="inner-container" id="inner-container">
+            <div id="message"></div>
+            <div><span id="score-final"></span></div>
+            <div id="save-score" class="saveScoreMsg">
+              Enter your name to save your score
+              <form id="saveScoreForm">
+                <input type="text" name="username" id="username" placeholder="username">
+                <button type="submit" class="modal-btn" id="saveScoreBtn" disabled>JOIN THE SCOREBOARD</button>
+              </form>
+            </div>
+          </div>
+          <div class="highScores" id="highScores">
+            <div>TOP 20 HYPER ISLAND</div>
+            <ul id="highScoresList"></ul>
+          </div>
+          <button type="submit" class="modal-btn" id="reStart-btn">
+            back to the beginning
+          </button>
+        </div>
+      </div>
+      
+    </section>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
