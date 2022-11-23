@@ -8,7 +8,7 @@ const saveScoreBtn = document.getElementById('saveScoreBtn');
 const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
 const highScoresBtn = document.getElementById('scoreboard');
 const timer = document.querySelector('h5');
-let quizDurationSeconds = 90; // Change this to change the time. 
+let quizDurationSeconds = 20; // Change this to change the time. 
 const startQuizBtn = document.getElementById('startQuiz');
 
 
@@ -131,8 +131,8 @@ submitScore.onsubmit = function(event) {
     user: username.value
   } 
   highScores.push(saveScore);
-  highScores.sort ( (a,b) => b.score - a.score);
-  highScores.splice(20); 
+  highScores.sort ( (a,b) => b.score - a.score);  // Sort from high score to low score
+  highScores.splice(20); // Maximum of scores saved in the array
 
   localStorage.setItem('highscores', JSON.stringify(highScores))
   showHighScores();
@@ -144,12 +144,12 @@ function showHighScores() {
   innerContainer.innerHTML = "";
   const highScoresList = document.getElementById('highScoresList');
   const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
-  console.log(highScores);
+  
 
-  highScoresList.innerHTML = highScores
-    .map (score => {
+  highScoresList.innerHTML = 
+  highScores.map (score => {
       return `<li class="highScoresList">${score.user} - ${score.score}</li>`
-  })
+  }).join("")
 }
 
 
