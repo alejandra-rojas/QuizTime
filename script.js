@@ -8,7 +8,7 @@ const saveScoreBtn = document.getElementById('saveScoreBtn');
 const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
 const highScoresBtn = document.getElementById('scoreboard');
 const timer = document.querySelector('h5');
-let quizDurationSeconds = 20; // Change this to change the time. 
+let quizDurationSeconds = 60; // Change this to change the time. 
 const startQuizBtn = document.getElementById('startQuiz');
 
 
@@ -20,17 +20,19 @@ startQuizBtn.addEventListener('click', function(){
   quizScreen.style.display= 'block';
   titleEl.remove();
 
+
+  const countDown = setInterval (() => {
+    quizDurationSeconds--;
+    displayTime(quizDurationSeconds);
+    if (quizDurationSeconds <= 0 || quizDurationSeconds < 1){
+      timeOverModal()
+      clearInterval(countDown)
+    }
+  }, 1000) 
   
 })
 
-const countDown = setInterval (() => {
-  quizDurationSeconds--;
-  displayTime(quizDurationSeconds);
-  if (quizDurationSeconds <= 0 || quizDurationSeconds < 1){
-    timeOverModal()
-    clearInterval(countDown)
-  }
-}, 1000) 
+
 
  function displayTime(duration){
   const min = Math.floor(duration / 60);
@@ -132,7 +134,7 @@ submitScore.onsubmit = function(event) {
   } 
   highScores.push(saveScore);
   highScores.sort ( (a,b) => b.score - a.score);  // Sort from high score to low score
-  highScores.splice(20); // Maximum of scores saved in the array
+  highScores.splice(15); // Maximum of scores saved in the array
 
   localStorage.setItem('highscores', JSON.stringify(highScores))
   showHighScores();
@@ -173,14 +175,14 @@ function timeOverModal(){
   const finalScore = document.getElementById('score-final');
   finalScore.innerHTML = `Your score: ${currentScore}`;
   const message = document.getElementById('message');
-  if (currentScore > 8){
-    message.innerHTML = "You are a star baby!"
+  if (currentScore > 7){
+    message.innerHTML = "You are a star!"
   } else if (currentScore >= 3){
-    message.innerHTML = "Well done! You scored above average."
+    message.innerHTML = "Well done! You scored above average"
   } else if (currentScore >= 1) {
     message.innerHTML = "Better than nothing!"
   } else {
-    modal.style.backgroundColor = 'black';
+    modal.style.backgroundColor = 'red';
     finalScore.innerHTML = '';
     const saveScore = document.getElementById('save-score');
     saveScore.style.display = 'none'

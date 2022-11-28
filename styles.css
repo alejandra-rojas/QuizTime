@@ -5,15 +5,15 @@
 }
 
 body {
-  padding-top: 50px;
-  font-family: "Rubik", sans-serif;
-  background-color: blanchedalmond;
+  font-family: "Sono", sans-serif;
+  background-color: #faeb42;
   color: black;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 p {
@@ -26,13 +26,20 @@ p {
 }
 
 h1 {
+  font-family: "Chewy", cursive;
+  color: orangered;
   margin-top: 40px;
-  font-size: 4rem;
+  font-size: 7rem;
   font-weight: 800;
+  text-shadow: -5px 5px 2px orange;
 }
 
 h3 {
+  font-family: "Sono", sans-serif;
+
   font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* #message-el {
@@ -43,10 +50,11 @@ h3 {
 } */
 
 .score {
+  font-family: "Chewy", sans-serif;
   text-align: center;
-  padding: 25px 0;
+  padding: 50px 0;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
@@ -59,13 +67,14 @@ h3 {
 h2 {
   width: 780px;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-top: 20px;
 }
 
 .questionInfo {
   padding: 15px 0;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   row-gap: 5px;
@@ -87,15 +96,18 @@ a {
 
 button,
 .button {
-  font-family: "Rubik", sans-serif;
+  font-family: "Sono", sans-serif;
+
   font-size: 1rem;
   font-weight: 600;
-  background-color: grey;
+  background-color: whitesmoke;
   text-transform: uppercase;
   width: 180px;
   border-style: none;
   padding: 15px;
   border-radius: 10px;
+  box-shadow: 5px 5px orangered;
+  cursor: pointer;
 }
 
 .emoji {
@@ -106,7 +118,7 @@ button,
   top: 0;
   bottom: 0;
   margin: auto;
-  font-size: 270px;
+  font-size: 255px;
 }
 
 .none {
@@ -115,11 +127,18 @@ button,
 
 .countdown {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0;
   background-color: red;
+  width: 150px;
+}
+
+h5 {
   color: white;
-  padding: 10px;
+
+  padding: 30px;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 /* Modal */
@@ -131,9 +150,9 @@ button,
   top: 0;
   bottom: 0;
   margin: auto;
-  height: 100%;
-  width: 100%;
-  background-color: darkolivegreen;
+  height: 98%;
+  width: 98%;
+  background-color: powderblue;
   color: whitesmoke;
 }
 
@@ -149,6 +168,7 @@ button,
 }
 
 .inner-container {
+  color: black;
   font-size: 2rem;
   line-height: 2rem;
 }
@@ -182,13 +202,13 @@ form {
 }
 
 .choices {
-  width: 80%;
+  width: 95%;
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
-  font-size: 1.2rem;
+  row-gap: 5px;
+  font-size: 1.5rem;
   font-weight: 400;
-  margin: 20px auto;
+  margin: 20px auto 30px;
 }
 
 .saveScoreMsg {
@@ -238,4 +258,15 @@ input::placeholder {
   flex-direction: column;
   row-gap: 5px;
   align-items: center;
+}
+
+.top20 {
+  font-family: "Chewy", cursive;
+  color: royalblue;
+  font-size: 2rem;
+}
+
+#message {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
