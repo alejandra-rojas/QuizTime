@@ -8,7 +8,7 @@ const saveScoreBtn = document.getElementById('saveScoreBtn');
 const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
 const highScoresBtn = document.getElementById('scoreboard');
 const timer = document.querySelector('h5');
-let quizDurationSeconds = 60; // Change this to change the time. 
+let quizDurationSeconds = 10; // Change this to change the time. 
 const startQuizBtn = document.getElementById('startQuiz');
 
 
