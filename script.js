@@ -182,7 +182,7 @@ function timeOverModal(){
   } else if (currentScore >= 1) {
     message.innerHTML = "Better than nothing!"
   } else {
-    modal.style.backgroundColor = 'red';
+    modal.style.backgroundColor = 'chartreuse';
     finalScore.innerHTML = '';
     const saveScore = document.getElementById('save-score');
     saveScore.style.display = 'none'
