@@ -1,8 +1,6 @@
-# QuizTime
+# Vanilla JS Quiz Game
 
-Random Quiz Game developed with vanilla JS. 
-
-The questions are from the Open Trivia Database API: https://opentdb.com/
+This quiz game presents a series of random questions retrieved from the Open Trivia Database API: https://opentdb.com/
 
 This game was the final excercise for the "Javascript Fundamentals" class at HyperIsland. 
 
