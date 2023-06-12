@@ -8,12 +8,13 @@ body {
   font-family: "Sono", sans-serif;
   background-color: #faeb42;
   color: black;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
 }
 
 p {
@@ -28,18 +29,18 @@ p {
 h1 {
   font-family: "Chewy", cursive;
   color: orangered;
-  margin-top: 40px;
-  font-size: 7rem;
   font-weight: 800;
   text-shadow: -5px 5px 2px orange;
+  font-size: 5rem;
+  line-height: 4rem;
+  text-align: center;
 }
 
 h3 {
   font-family: "Sono", sans-serif;
-
   font-weight: 600;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 5rem;
 }
 
 /* #message-el {
@@ -59,26 +60,20 @@ h3 {
 }
 
 .container {
-  padding-bottom: 30px;
   text-align: center;
   position: relative;
+  padding-top: 10vh;
 }
 
 h2 {
-  width: 780px;
+  width: 100%;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.42rem;
   margin-top: 20px;
 }
 
 .questionInfo {
-  padding: 15px 0;
-  font-size: 0.9rem;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-  text-transform: uppercase;
+  display: none;
 }
 
 .buttons {
@@ -97,7 +92,6 @@ a {
 button,
 .button {
   font-family: "Sono", sans-serif;
-
   font-size: 1rem;
   font-weight: 600;
   background-color: whitesmoke;
@@ -110,12 +104,17 @@ button,
   cursor: pointer;
 }
 
+.new,
+.guess {
+  width: 35vw;
+}
+
 .emoji {
   display: block;
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 15vh;
   bottom: 0;
   margin: auto;
   font-size: 255px;
@@ -130,14 +129,14 @@ button,
   top: 0;
   right: 0;
   background-color: red;
-  width: 150px;
+  width: 100%;
+  text-align: center;
 }
 
 h5 {
   color: white;
-
-  padding: 30px;
-  font-size: 2rem;
+  padding: 1.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -157,7 +156,7 @@ h5 {
 .modal-inner {
   display: flex;
   flex-direction: column;
-  width: 650px;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   text-align: center;
@@ -189,10 +188,10 @@ form {
   margin: 1rem 0;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  column-gap: 10px;
+  gap: 10px;
 }
 
 #saveScoreForm button {
@@ -203,7 +202,7 @@ form {
   width: 95%;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 10px;
   font-size: 1.5rem;
   font-weight: 400;
   margin: 20px auto 30px;
@@ -221,14 +220,6 @@ input {
   font-size: 1.2rem;
   border: none;
 }
-
-/* input {
-  width: 28rem;
-  padding: 1rem;
-  font-size: 1.2rem;
-  border: none;
-  box-shadow: 0 0.1rem 1.4rem 0 rgb(30, 7, 75, 0.5);
-} */
 
 input::placeholder {
   color: #aaa;
@@ -253,8 +244,9 @@ input::placeholder {
 
 .btn-cont {
   display: flex;
-  flex-direction: column;
-  row-gap: 5px;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 15px;
   align-items: center;
 }
 
@@ -265,6 +257,102 @@ input::placeholder {
 }
 
 #message {
+  padding: 0 1rem;
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 5vh;
+}
+
+@media screen and (min-width: 53em) {
+  h1 {
+    font-family: "Chewy", cursive;
+    color: orangered;
+    margin-top: 40px;
+    font-size: 7rem;
+    font-weight: 800;
+    text-shadow: -5px 5px 2px orange;
+    line-height: normal;
+  }
+
+  h3 {
+    margin-top: 1.5rem;
+  }
+
+  h2 {
+    width: 100%;
+    max-width: 780px;
+    font-size: 1.5rem;
+  }
+
+  .countdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    width: 150px;
+  }
+
+  button,
+  .button {
+    font-family: "Sono", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: whitesmoke;
+    text-transform: uppercase;
+    width: 180px;
+    border-style: none;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px orangered;
+    cursor: pointer;
+  }
+
+  h5 {
+    color: white;
+    padding: 30px;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .container {
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .questionInfo {
+    font-size: 0.9rem;
+  }
+
+  .choices {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 20px auto 30px;
+  }
+
+  .btn-cont {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  form {
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  .emoji {
+    top: 0;
+  }
 }
